@@ -17,6 +17,15 @@ body {
   padding: 0;
 }
 
+h1 {
+  color: var(--heading-color);
+  font-size: 54px;
+  line-height: 62px;
+  & span {
+    color: var(--primary-color);
+  }
+}
+
 h2 {
   color: var(--heading-color);
   font-size: 42px;
@@ -59,13 +68,29 @@ ul {
 
 .btn-primary {
   background-color: var(--primary-color);
-  border-radius: 10px;
+  border-radius: 25px;
   box-shadow: 1px 0.1rem 0.5rem 0px rgb(60, 60, 60);
   color: var(--white);
   display: block;
-  padding: 8px 10px;
+  padding: 16px;
   text-decoration: none;
   width: fit-content;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  padding: 60px 0;
+  & h1 {
+    margin-bottom: 20px;
+    max-width: 405px;
+  }
+  & p {
+    font-size: 22px;
+    line-height: 34px;
+    margin-bottom: 30px;
+  }
 }
 
 /* Services Styles */
@@ -100,5 +125,40 @@ ul {
   & p {
     margin: 0 auto 20px;
     max-width: 316px;
+  }
+}
+
+/* Testimonials Styles */
+
+.testimonials {
+  background-color: var(--light-gray);
+  padding: 70px;
+  & h2 {
+    max-width: 670px;
+    margin: 0 auto 50px;
+    text-align: center;
+  }
+}
+.testimonials-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.testimonials-item {
+  background-color: var(--white);
+  padding: 20px;
+  & p {
+    font-size: 18px;
+  }
+}
+
+.testimonials-author {
+  display: flex;
+  justify-content: flex-start;
+  gap: 30px;
+  margin-top: 30px;
+  & img {
+    max-width: 70px;
   }
 }
